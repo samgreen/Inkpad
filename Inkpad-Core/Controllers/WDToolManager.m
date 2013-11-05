@@ -15,6 +15,7 @@
 #import "WDFreehandTool.h"
 #import "WDPenTool.h"
 #import "WDRotateTool.h"
+#import "WDRotateCopiesTool.h"
 #import "WDScaleTool.h"
 #import "WDScissorTool.h"
 #import "WDSelectionTool.h"
@@ -66,17 +67,18 @@ NSString *WDActiveToolDidChange = @"WDActiveToolDidChange";
         spiral.shapeMode = WDShapeSpiral;
         
         tools_ = @[[WDSelectionTool tool],
-                  groupSelect,
-                  [WDPenTool tool],
-                  [WDAddAnchorTool tool],
-                  [WDScissorTool tool],
-                  [WDFreehandTool tool],
-                  [WDEraserTool tool],
-                  @[rect, oval, star, poly, spiral, line],
-                  [WDTextTool tool],
-                  [WDEyedropperTool tool], 
-                  [WDScaleTool tool],
-                  [WDRotateTool tool]];
+                   groupSelect,
+                   [WDPenTool tool],
+                   [WDAddAnchorTool tool],
+                   [WDScissorTool tool],
+                   [WDFreehandTool tool],
+                   [WDEraserTool tool],
+                   @[rect, oval, star, poly, spiral, line],
+                   [WDTextTool tool],
+                   [WDEyedropperTool tool],
+                   [WDScaleTool tool],
+                   [WDRotateTool tool],
+                   [WDRotateCopiesTool tool]];
     }
     
     return tools_;
